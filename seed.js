@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 mongoose.connect(process.env.DB_URL);
 
-const Cat = require('./models/cat.js');
+const Book = require('./models/book.js');
 
 async function seed() {
   // **name: {type: String, required: true},
@@ -13,32 +13,29 @@ async function seed() {
   // **spayNeuter: {type: Boolean, required: true},
   // **location: {type: String, required: true}
 
-  await Cat.create({
-    name: 'Ronald',
-    color: 'Orange Tabby',
-    spayNeuter: true,
-    location: 'Seattle'
+  await Book.create({
+    title: 'The Hitchhikers Guide to the Galaxy',
+    description: '42',
+    status: 'available'
   });
 
-  console.log('Ronald was created!');
+  console.log('book 1 was created!');
 
-  await Cat.create({
-    name: 'Karl',
-    color: 'Black and White Tabby',
-    spayNeuter: true,
-    location: 'Rainbow Bridge'
+  await Book.create({
+    title: 'Quotations from Chairman Mao Tse-Tung',
+    description: 'non-fiction',
+    status: 'available'
   });
 
-  console.log('Karl was created');
+  console.log('book 2 was created');
 
-  await Cat.create({
-    name: 'Victor',
-    color: 'Grey Tabby',
-    spayNeuter: true,
-    location: 'Rainbow Bridge'
+  await Book.create({
+    title: 'The Lord of the Rings',
+    description: 'fiction',
+    status: 'available'
   });
-  
-  console.log('Victor was created');
+
+  console.log('book 3 was created');
 
   mongoose.disconnect();
 }
