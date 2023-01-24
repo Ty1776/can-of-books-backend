@@ -27,6 +27,16 @@ Mike Shen
 
 ## Time Estimates
 
+Name of feature: Back end connections and schema
+
+Estimate of time needed to complete: 2hrs
+
+Start time: 1300
+
+Finish time: 1430
+
+Actual time needed to complete: 1.5hrs
+
 Name of feature: Create / Delete
 
 Estimate of time needed to complete: 4 hours
