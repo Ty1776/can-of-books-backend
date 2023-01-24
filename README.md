@@ -1,27 +1,18 @@
-# Start your own "Can of Books" App
-
-This repository has starter code to begin work on creating your own online bookshelf.
-
-## What can books do?
-
-Books are life-changing. They have the power to enlighten, educate, entertain, heal, and help us grow. Build out this code base to create an web app to track what books have impacted you, and what's recommended to read next.
-
-## Use this template
-
-Clone this repo to your own account with the green "Use this template" button. Then, add any collaborators. Now you are ready to start adding features! Deploy your site to let the world know which books have had the greatest impact on you, and what's recommended. Enjoy!
-
 # Can of Books  
 
 **Author**: Tyler Huntley & Mike Shen
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
+
 Books are life-changing. They have the power to enlighten, educate, entertain, heal, and help us grow. Build out this code base to create an web app to track what books have impacted you, and what's recommended to read next.
 
 ## Getting Started
+
 update env
 
 ## Architecture
+
 express, axios, cors, mongoose, mongodb
 javascript
 
@@ -30,12 +21,11 @@ javascript
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
-## Estimates
-<!-- See below -->
-
 ## Credit and Collaborations
 
 Mike Shen
+
+## Time Estimates
 
 Name of feature: Back end connections and schema
 
@@ -46,3 +36,13 @@ Start time: 1300
 Finish time: 1430
 
 Actual time needed to complete: 1.5hrs
+
+Name of feature: Create / Delete
+
+Estimate of time needed to complete: 4 hours
+
+Start time: 1:00 PM
+
+Finish time: 3:10 PM
+
+Actual time needed to complete: 2 hrs 10 minutes

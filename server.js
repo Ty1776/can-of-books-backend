@@ -6,7 +6,6 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 const Book = require('./models/book');
-const { default: axios } = require('axios');
 
 mongoose.connect(process.env.DB_URL);
 
@@ -18,7 +17,7 @@ db.once('open', function () {
 
 const app = express();
 app.use(cors());
-app.use(express.json()); // ***************************************** ADDED THIS
+app.use(express.json());
 
 const PORT = process.env.PORT || 3002;
 
@@ -39,8 +38,6 @@ async function getBooks(request, response, next) {
 }
 
 
-
-
 // *** ENDPOINT TO DELETE
 app.delete('/books/:bookID', deleteBooks);
 
@@ -54,8 +51,6 @@ async function deleteBooks(request, response, next) {
     next(error);
   }
 }
-
-
 
 
 // *** ENDPOINT TO ADD
@@ -73,15 +68,11 @@ async function postBook(request, response, next) {
 }
 
 
-
-
-
-
 app.get('*', (request, response) => {
   response.status(404).send('Not available');
 });
 
-app.use((error, request, response, next) => {
+app.use((error, request, response) => {
   response.status(500).send(error.message);
 });
 
