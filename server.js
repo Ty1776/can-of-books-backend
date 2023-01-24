@@ -6,6 +6,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 const Book = require('./models/book');
+const { default: axios } = require('axios');
 
 mongoose.connect(process.env.DB_URL);
 
@@ -17,6 +18,7 @@ db.once('open', function () {
 
 const app = express();
 app.use(cors());
+app.use(express.json()); // ***************************************** ADDED THIS
 
 const PORT = process.env.PORT || 3002;
 
@@ -26,7 +28,7 @@ app.get('/', (request, response) => {
 
 app.get('/books', getBooks);
 
-async function getBooks(request, response, next){
+async function getBooks(request, response, next) {
   try {
     let allBooks = await Book.find({});
     response.status(200).send(allBooks);
@@ -35,6 +37,45 @@ async function getBooks(request, response, next){
     next(error);
   }
 }
+
+
+
+
+// *** ENDPOINT TO DELETE
+app.delete('/books/:bookID', deleteBooks);
+
+async function deleteBooks(request, response, next) {
+  try {
+    let id = request.params.bookID;
+    await Book.findByIdAndDelete(id);
+    response.status(200).send('book deleted');
+  } catch (error) {
+    console.log(error.message);
+    next(error);
+  }
+}
+
+
+
+
+// *** ENDPOINT TO ADD
+app.post('/books', postBook);
+
+async function postBook(request, response, next) {
+  try {
+    let createdBook = await (Book.create(request.body));
+
+    response.status(200).send(createdBook);
+  } catch (error) {
+    console.log(error.message);
+    next(error);
+  }
+}
+
+
+
+
+
 
 app.get('*', (request, response) => {
   response.status(404).send('Not available');

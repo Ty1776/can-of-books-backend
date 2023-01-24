@@ -11,9 +11,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.2.3",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mongoose": "^6.8.4"
+    "kill-port": "^2.0.1",
+    "mongoose": "^6.8.4",
+    "save": "^2.9.0"
   }
 }
