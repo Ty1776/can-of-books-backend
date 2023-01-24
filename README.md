@@ -34,14 +34,15 @@ javascript
 <!-- See below -->
 
 ## Credit and Collaborations
+
 Mike Shen
 
-Name of feature: 
+Name of feature: Back end connections and schema
 
-Estimate of time needed to complete: 
+Estimate of time needed to complete: 2hrs
 
-Start time: 
+Start time: 1300
 
-Finish time: 
+Finish time: 1430
 
-Actual time needed to complete: 
+Actual time needed to complete: 1.5hrs
