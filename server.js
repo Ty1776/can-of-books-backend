@@ -67,6 +67,23 @@ async function postBook(request, response, next) {
   }
 }
 
+// *** ENDPOINT TO UPDATE BOOK
+app.put('/books/:bookId', updateBook);
+async function updateBook(request, response, next){
+  try {
+    let id = request.params.bookId;
+    let bookData = request.body;
+
+    const updatedBook = await Book.findByIdAndUpdate(id, bookData, { new: true, overwrite: true });
+
+    response.status(200).send(updatedBook);
+
+  } catch (error) {
+    console.log(error.message);
+    next(error);
+  }
+}
+
 
 app.get('*', (request, response) => {
   response.status(404).send('Not available');
