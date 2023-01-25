@@ -37,6 +37,8 @@ Finish time: 1430
 
 Actual time needed to complete: 1.5hrs
 
+-----------------------------------------------
+
 Name of feature: Create / Delete
 
 Estimate of time needed to complete: 4 hours
@@ -46,3 +48,15 @@ Start time: 1:00 PM
 Finish time: 3:10 PM
 
 Actual time needed to complete: 2 hrs 10 minutes
+
+-----------------------------------------------
+
+Name of feature: Update books functionality on backend
+
+Estimate of time needed to complete: 1hrs
+
+Start time: 1230
+
+Finish time: 1315
+
+Actual time needed to complete: 0.75hrs
